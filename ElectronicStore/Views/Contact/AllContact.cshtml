@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ElectronicStore.Models.Contact_Table>
+
+@{
+    ViewBag.Title = "AllContact";
+}
+
+<h2>All Contact</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>Delete</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+            <span class="btn btn-success">@Html.ActionLink("Delete", "Delete", new { id = item.id })</span>
+        </td>
+    </tr>
+}
+
+</table>

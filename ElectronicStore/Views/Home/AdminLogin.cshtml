@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "AdminLogin";
+}
+
+<br/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <img src="~/img/e5.jpg" class="img-thumbnail"/>
+
+        </div>
+        <div class="col-md-6">
+            <form method="post" action="admin">
+               
+                <div class="form-group-lg">
+                    <label>Enter Email </label> <br />
+                    <input type="Email" class="form-control" name="User_Email" />
+                </div>
+
+                <div class="form-group-lg">
+                    <label>Enter Password </label> <br />
+                    <input type="password" class="form-control" name="User_Password" />
+                </div>
+
+                <input type="submit" value="Sign In" class="btn btn-danger" />
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
